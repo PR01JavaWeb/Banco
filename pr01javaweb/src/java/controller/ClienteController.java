@@ -22,7 +22,7 @@ public class ClienteController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("registro2.jsp");
+        response.sendRedirect("clientes.jsp");
     }
 
     /**
