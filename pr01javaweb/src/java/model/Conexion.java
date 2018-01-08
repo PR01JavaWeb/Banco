@@ -38,11 +38,11 @@ public class Conexion {
             
         } catch (ClassNotFoundException e) {
             JOptionPane.showConfirmDialog(null, e);
-            JOptionPane.showMessageDialog(null, "Conexion erronea");
+            //JOptionPane.showMessageDialog(null, "Conexion erronea");
             
         } catch (SQLException e) {
             JOptionPane.showConfirmDialog(null, e);
-            JOptionPane.showMessageDialog(null, "Conexion erronea");
+            //JOptionPane.showMessageDialog(null, "Conexion erronea");
         }
         
        return link;
