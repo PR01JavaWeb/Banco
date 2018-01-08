@@ -13,7 +13,7 @@
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
-            width: 60%;            
+            width: 65%;            
         }
 
         td, th {
@@ -54,6 +54,10 @@
                 </td>
                 <td>
                     <% out.println(client.getCli_cuentabancaria());%>
+                </td>
+                <td>
+                    <a href="clientemodificarcontroller?id=<% out.println(client.getCli_id()); %>">Modificar</a>  
+                    <a href="clienteeliminarcontroller?id=<% out.println(client.getCli_id()); %>">Eliminar</a>  
                 </td>
             </tr>       
             <% }%>
