@@ -6,10 +6,18 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+import model.Conexion;
 
 /**
  *
@@ -17,25 +25,29 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ClienteController extends HttpServlet {
 
+    Conexion cn = new Conexion();
+    Connection con = cn.conectar();
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.sendRedirect("clientes.jsp");
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        try {
+            String sql = "SELECT * FROM cliente";
+            JOptionPane.showMessageDialog(null, sql);
+            Statement st;
+            st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            rs.next();
+            int n = rs.getRow();  
+        } catch (SQLException ex) {
+            Logger.getLogger(ClienteController.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 

@@ -14,5 +14,6 @@
     <body>
         <h1>Clientes</h1>
         <p>Aqui va la tabla</p>
+        <a href="clientemodificarcontroller?id=<% out.println(cliente.getCli_id()); %>">Modificar</a>
     </body>
 </html>
