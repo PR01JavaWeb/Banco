@@ -33,7 +33,7 @@ public class Conexion {
             
             //System.out.println("Conexion establecida con exito");
                     
-            JOptionPane.showMessageDialog(null, "Conexion correcta");      
+            //JOptionPane.showMessageDialog(null, "Conexion correcta");      
             
             
         } catch (ClassNotFoundException e) {
