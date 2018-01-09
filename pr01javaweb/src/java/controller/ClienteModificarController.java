@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Cliente;
 import model.Conexion;
 
 /**
@@ -27,9 +28,9 @@ public class ClienteModificarController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-            int id = Integer.ValueOf(request.getParameter("cli_id"));
+            int id = Integer.valueOf(request.getParameter("id"));
             //Recupera los datos del usuario
-            String sql = "SELECT * FROM cliente WHERE cli_nombre="+id;
+            String sql = "SELECT * FROM cliente WHERE cli_id="+id;
             Statement st;
             st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
