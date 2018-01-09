@@ -56,8 +56,8 @@
                     <% out.println(client.getCli_cuentabancaria());%>
                 </td>
                 <td>
-                    <a href="clientemodificarcontroller?id=<% out.println(client.getCli_id()); %>">Modificar</a>  
-                    <a href="clienteeliminarcontroller?id=<% out.println(client.getCli_id()); %>">Eliminar</a>  
+                    <a href="ClienteModificarController?id=<% out.println(client.getCli_id()); %>">Modificar</a>  
+                    <a href="ClienteEliminarController?id=<% out.println(client.getCli_id()); %>">Eliminar</a>  
                 </td>
             </tr>       
             <% }%>
