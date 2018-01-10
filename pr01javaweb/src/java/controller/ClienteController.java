@@ -54,8 +54,7 @@ public class ClienteController extends HttpServlet {
                 cliente.setCli_cuentabancaria(rs.getString("cli_cuentabancaria"));
                 milistacliente.add(cliente);
             }
-
-            //JOptionPane.showMessageDialog(null, "Hola he llegado al controller");
+            
             request.setAttribute("milistacliente", milistacliente);
 
             //en una sola linea hago lo mismo que lo que hay abajo comentado

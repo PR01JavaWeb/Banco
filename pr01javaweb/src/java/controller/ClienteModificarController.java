@@ -30,12 +30,12 @@ public class ClienteModificarController extends HttpServlet {
         try{
             int id = Integer.valueOf(request.getParameter("id"));
             //Recupera los datos del usuario
-            String sql = "SELECT * FROM cliente WHERE cli_id="+id;
+            String sql = "SELECT * FROM cliente WHERE cli_id="+id;            
             Statement st;
             st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
-            rs.next();
-            
+            // Avanza una posición del Result Set porque por defecto esta en la posición -1.
+            rs.next();           
             
             Cliente cliente = new Cliente();
             cliente.setCli_id(rs.getInt("cli_id"));
@@ -44,7 +44,7 @@ public class ClienteModificarController extends HttpServlet {
             cliente.setCli_email(rs.getString("cli_email"));
             cliente.setCli_cuentabancaria(rs.getString("cli_cuentabancaria"));
             
-            request.setAttribute("micliente", cliente);
+            request.setAttribute("cliente", cliente);
             
             request.getRequestDispatcher("clientemodificar.jsp").forward(request, response);
         }catch (SQLException ex){
@@ -54,7 +54,7 @@ public class ClienteModificarController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
     }
 
     @Override
