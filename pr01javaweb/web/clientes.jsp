@@ -13,18 +13,20 @@
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
-            width: 65%;            
+            width: 65%;
+            border: 3px solid #ddd;
         }
 
         td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
+            border: 2px solid #ddd;
+            text-align: center;
             padding: 8px;
         }
-
-        tr:nth-child(even) {
+        th {
             background-color: #dddddd;
+            text-align: center;
         }
+
     </style>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
