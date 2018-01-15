@@ -11,22 +11,27 @@
     <servlet>
         <servlet-name>ClienteModificarController</servlet-name>
         <servlet-class>controller.ClienteModificarController</servlet-class>
-    </servlet>    
+    </servlet>
+    <servlet>
+        <servlet-name>ClienteNuevoController</servlet-name>
+        <servlet-class>controller.ClienteNuevoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClienteController</servlet-name>
         <url-pattern>/ClienteController</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>ClienteEliminarController</servlet-name>
         <url-pattern>/ClienteEliminarController</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>ClienteModificarController</servlet-name>
         <url-pattern>/ClienteModificarController</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>ClienteNuevoController</servlet-name>
+        <url-pattern>/ClienteNuevoController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

@@ -14,6 +14,7 @@
     </head>
     <body>
         <form action="ClienteModificarController" method="POST">
+            <input type="hidden" name="cli_id" value="${cliente.getCli_id()}">
             <input type="text" name="cli_nombre" value="${cliente.getCli_nombre()}">
             <input type="text" name="cli_apellidos" value="${cliente.getCli_apellidos()}">
             <input type="text" name="cli_email" value="${cliente.getCli_email()}">

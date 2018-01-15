@@ -35,6 +35,22 @@ public class ClienteDAO {
         }
 
     }
-    
+
+    public void nuevoCliente(String cli_nombre, String cli_apellidos, String cli_email, String cli_cuentabancaria) {
+        // Consulta
+        String sql = "INSERT INTO cliente (cli_nombre,cli_apellidos, cli_email, cli_cuentabancaria) VALUES (?,?,?,?)";
+        try {
+            PreparedStatement pst = con.prepareStatement(sql);
+
+            pst.setString(1, cli_nombre);
+            pst.setString(2, cli_apellidos);
+            pst.setString(3, cli_email);
+            pst.setString(4, cli_cuentabancaria);
+
+            int n = pst.executeUpdate();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }
 
 }
